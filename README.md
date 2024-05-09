@@ -12,3 +12,5 @@ An adaptive admin panel for viewing and validating cheques, written on `Streamli
 
 # Screenshots
 ![](./res/screenshot.png)
+![](./res/screenshot1.png)
+![](./res/screenshot2.png)
