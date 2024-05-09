@@ -1,4 +1,4 @@
-An admin panel for viewing and validating cheques, written on `Streamlit` and `MongoDB`.
+An adaptive admin panel for viewing and validating cheques, written on `Streamlit` and `MongoDB`.
 
 # Installation
 ```bash
@@ -9,3 +9,6 @@ An admin panel for viewing and validating cheques, written on `Streamlit` and `M
 ```bash
 > streamlit run main.py
 ```
+
+# Screenshots
+![](./res/screenshot.png)
