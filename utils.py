@@ -16,14 +16,12 @@ def init_cheque_handler():
 
 	app = FastAPI()
 
-
 	class Cheque(BaseModel):
 		content: str
 		date: str
 		cost: str
 		contact: str
 		active: bool
-
 
 	@app.post('/sales/api/rest/v1/cheque')
 	async def post(cheque: Cheque):
