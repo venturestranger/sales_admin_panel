@@ -37,7 +37,7 @@ def render_page():
 
 		if close and confirm: 
 			disable(selected_ad.id)
-			st.success('Обновите страницу, чтобы изменения отобразились')
+			st.rerun()
 		elif close and not confirm:
 			st.error('Вы не подтвердили действие')
 	else:
