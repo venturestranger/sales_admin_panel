@@ -1,6 +1,7 @@
 class Ad:
-	def __init__(self, id, content: str, date: str, cost: str, contact: str):
+	def __init__(self, id, name: str, content: str, date: str, cost: str, contact: str):
 		self.id = id
+		self.name = name
 		self.content = content
 		self.date = date
 		self.cost = cost

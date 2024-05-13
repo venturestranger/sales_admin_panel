@@ -21,14 +21,16 @@ def render_page():
 	global selected_ad
 
 	if selected_ad != None:
+		st.caption('Имя:')
+		st.info(f'{selected_ad.name}')
+		st.caption('Телефон:')
+		st.info(f'{selected_ad.contact}')
 		st.caption('Описание:')
-		st.info(selected_ad.content)
+		st.info(f'{selected_ad.content}')
 		st.caption('Дата:')
 		st.info(f'{selected_ad.date}')
 		st.caption('Цена:')
 		st.info(f'{selected_ad.cost} тг.')
-		st.caption('Телефон:')
-		st.info(f'{selected_ad.contact}')
 
 		confirm = st.checkbox('Подтвердить действие')
 		close = st.button('Закрыть чек')
