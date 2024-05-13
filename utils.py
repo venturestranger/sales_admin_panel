@@ -20,6 +20,7 @@ def init_cheque_handler():
 
 	class Cheque(BaseModel):
 		content: str
+		name: str
 		date: str
 		cost: str
 		contact: str
