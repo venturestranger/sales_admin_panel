@@ -10,6 +10,7 @@ class Ad:
 
 def init_cheque_handler():
 	from fastapi import FastAPI, Response
+	from fastapi.middleware.cors import CORSMiddleware
 	from pydantic import BaseModel
 	from config import Config
 	import motor.motor_asyncio
@@ -33,8 +34,17 @@ def init_cheque_handler():
 
 		return Response(content='OK', status_code=200)
 	
-	uvicorn.run(app, host='0.0.0.0', port=Config.CHEQUE_HANDLER_PORT)
+	app.add_middleware(
+		CORSMiddleware,
+		allow_origins=['*'],
+		allow_credentials=True,
+		allow_methods=['*'],
+		allow_headers=['*']
+	)
+	
+	return app
 
 
 if __name__ == "__main__":
-	init_cheque_handler()
+	app = init_cheque_handler()
+	uvicorn.run(app, host='0.0.0.0', port=Config.CHEQUE_HANDLER_PORT)
