@@ -11,7 +11,7 @@ def render_sidebar():
 	
 	global selected_ad
 
-	selected_id = st.sidebar.selectbox('Выберите чек:', list(map(lambda x: f'{x[0]}. {x[1].date.split()[0]}', enumerate(cheques))))
+	selected_id = st.sidebar.selectbox('Выберите чек:', list(map(lambda x: f'{x[0]}. {x[1].date}', enumerate(cheques))))
 
 	if selected_id != None:
 		selected_ad = cheques[int(selected_id.split('. ')[0])]
